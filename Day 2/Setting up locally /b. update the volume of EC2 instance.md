@@ -88,3 +88,6 @@ tmpfs           794M   12K  794M   1% /run/user/1000
 ubuntu@ip-172-31-32-192:~/ultimate-devops-project-demo$ 
 
 ```
+
+
+Now we can again run `docker compose up -d`
