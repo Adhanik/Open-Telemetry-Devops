@@ -25,3 +25,6 @@ sudo apt-get update
 
 5. Logout and login again - docker ps
 6. check if docker running - sudo systemctl status docker
+
+
+7. check docker compose - docker compose -h
