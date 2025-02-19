@@ -65,7 +65,7 @@ tmpfs           794M   12K  794M   1% /run/user/1000
 
 ```
 
-So we need to run - `sudo resize2fs /dev/xdva1`
+So we need to run - `sudo resize2fs /dev/xvda1`
 
 ```
 sudo resize2fs /dev/xvda1
