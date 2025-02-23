@@ -1,0 +1,19 @@
+FROM ubuntu:latest AS build 
+
+WORKDIR /app/usr/bin 
+
+COPY . .  
+
+RUN sdk install gradle 8.12.1
+
+RUN ./gradlew installDist
+
+
+FROM alpine as release 
+
+COPY --from=build /app/usr/bin . 
+
+EXPOSE ${AD_PORT}
+ENV AD_PORT=8080
+
+ENTRYPOINT ["./build/install/opentelemetry-demo-ad/bin/Ad"]
