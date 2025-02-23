@@ -4,8 +4,8 @@ We will go to product-catalog ms, delete the existing docker file and the binary
 1. Since we are working with a GO ms, we will use a golang as base image. 
 2. We will use Multi stage build
 3. We will copy the source code into our Docker file
-4. We will download the binaries from go.mod (## in go there is file called go.mod. we will download the binaries from go.mod by running go mod download) and put the binary in /go/bin/product-catalog
-5. We will copy the binary in second stage. 
+4. We will download the binaries from go.mod (## in go there is file called go.mod. we will download the binaries from go.mod by running go mod download)
+5. We will copy the binary in second stage from the workdir path we have mentioned in first path - /usr/src/app 
 
 6. Run - docker build -t adminnik/productcatalog:v1 .
 
