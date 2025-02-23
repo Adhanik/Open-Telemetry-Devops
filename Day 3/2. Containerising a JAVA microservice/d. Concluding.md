@@ -1,11 +1,14 @@
 
 ## Building the docker file
 
+```
+
 docker build -t adminnik/adservice:v1 .
 2025/02/23 13:37:16 in: []string{}
 2025/02/23 13:37:16 Parsed entitlements: []
 [+] Building 89.5s (21/21) FINISHED                                                                          
 
+```
 ## Image
 We can see our docker image is build.
 
@@ -19,7 +22,7 @@ hello-world          latest    74cc54e27dc4   4 weeks ago      10.1kB
 
 ## Run the image
 
-If we run our dockre image, we can see the ms is giving O/P
+If we run our docker image, we can see the ms is giving O/P
 
 ```
 ubuntu@ip-172-31-32-237:~/ultimate-devops-project-demo/src/ad$ docker run adminnik/adservice:v1
