@@ -29,10 +29,10 @@ resource "aws_s3_bucket" "example" {
 resource "aws_dynamodb_table" "basic-dynamodb-table" {
   name           = "amit-terraform-state-locks"
   billing_mode   = "PAY_PER_REQUEST"
-  hash_key       = "LockId"
+  hash_key       = "LockID"
 
   attribute {
-    name = "LockId"
+    name = "LockID"
     type = "S"      #(Required) Attribute type. Valid values are S (string), N (number), B (binary).
   }
 
