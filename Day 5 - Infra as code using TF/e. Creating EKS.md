@@ -9,3 +9,10 @@ To create EKS cluster, we need to create two IAM roles, where one IAM role is fo
 
 - create `NODE GROUP`, and attach node group to EKS cluster.
 
+## During writing main.tf for EKS
+
+- So we created the IAM cluster role, attached policies to it. next we will create EKS cluster
+
+- while creating the resource "aws_eks_cluster" "main" {}, you need to assign the cluster role that you have created in first step, eg - > role_arn = aws_iam_role.cluster.arn 
+
+- depends_on makes sure that IAM role is created first, and then we proceed for resource "aws_eks_cluster" to be created.
