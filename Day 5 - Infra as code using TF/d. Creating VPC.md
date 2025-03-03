@@ -17,3 +17,13 @@ So modules block directly start with resource block.
 
 
 - We will start with writing the VPC TF files first
+
+1. vpc
+2. private subent
+3. publice subent
+4. IGW
+5. create route table for public subnet, add IGW to this route table 
+6. associate route table with public subnet using resource aws_route_table_association
+7. Next we will create a NAT Gateway. The NAT Gateway details consist entirely of public subnet details
+8. we will do same for private subnet as well, create route table for private subnent, and attach NAT gateway in gateway_id 
+9. associate route table with private subent
