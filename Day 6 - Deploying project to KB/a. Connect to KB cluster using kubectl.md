@@ -53,6 +53,16 @@ sudo ./aws/install`
 
 - `aws configure`  ## add them from cd .aws/credentials
 
+- Install eksctl
+
+# Example for Linux with a specific version
+```
+
+curl -sLO "https://github.com/weaveworks/eksctl/releases/download/v0.156.0/eksctl_Linux_amd64.tar.gz"
+tar -xzf eksctl_Linux_amd64.tar.gz -C /tmp
+sudo mv /tmp/eksctl /usr/local/bin
+```
+
 To update kube config, we will run - `aws eks update-kubeconfig --region region-code --name <name of eks cluster>`
 
 `aws eks update-kubeconfig --region us-east-1 --name my-eks-cluster`
